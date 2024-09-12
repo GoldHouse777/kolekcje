@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class Main {
         int [] tablicaLiczbLosowych = new int[6];
         //losujemy wartosci z zakresu od 1 do 100
         for (int i = 0; i < tablicaLiczbLosowych.length; i++) {
-            tablicaLiczbLosowych[i] = (int)(Math.random()*100);
+            tablicaLiczbLosowych[i] = (int)(Math.random()*100+1);
         }
         //wypisywanie tablicy na ekranie
         for (int element:tablicaLiczbLosowych) {
@@ -37,5 +38,16 @@ public class Main {
             System.out.println(element+", ");
         }
         System.out.println(listaLiczbLosowych);
+        //losowanie do lisy bez powtorzen
+        ArrayList<Integer> listaLosowychBezPowtorzen = new ArrayList<>();
+        int liczba;
+        for (int i = 0; i < 6; i++) {
+            liczba = (int)(Math.random()*100+1);
+            while(listaLosowychBezPowtorzen.contains(liczba)){
+                liczba = (int)(Math.random()*100+1);
+            }
+            listaLosowychBezPowtorzen.add(liczba);
+        }
+        System.out.println(listaLosowychBezPowtorzen);
     }
 }
