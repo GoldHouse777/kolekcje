@@ -1,7 +1,6 @@
+import javax.print.attribute.IntegerSyntax;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -65,6 +64,16 @@ public class Main {
         }
         System.out.println("Zbiór liczb losowych");
         System.out.println(zbiorLiczbLosowych);
+
+        //lista liczb wczytywanych z klawiatury
+        Scanner klawiatura = new Scanner(System.in);
+        LinkedList<Integer> listaLiczbZKlawiatury = new LinkedList<>();
+        System.out.println("Podaj 6 liczb");
+        for (int i = 0; i < 6; i++) {
+            int wartosc = klawiatura.nextInt();
+            listaLiczbZKlawiatury.add(wartosc);
+        }
+        //trafione czyli takie ktore sa i we wpisanych i w wylosowanych
 
 
     }
