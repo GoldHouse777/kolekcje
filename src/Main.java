@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Main {
@@ -49,5 +50,22 @@ public class Main {
             listaLosowychBezPowtorzen.add(liczba);
         }
         System.out.println(listaLosowychBezPowtorzen);
+        /*
+        - lista:
+        indeksowana, uporzadkowana, elementy moga sie powtarzac
+
+        - zbiór: (zazwyczaj)
+        nieindeksowana, nieuporzadkowane, elementy unikatowe (bez powtorzen)
+         */
+
+        HashSet<Integer> zbiorLiczbLosowych = new HashSet<>();
+        while(zbiorLiczbLosowych.size()<6){
+            liczba = (int)(Math.random()*100+1);
+            zbiorLiczbLosowych.add(liczba);
+        }
+        System.out.println("Zbiór liczb losowych");
+        System.out.println(zbiorLiczbLosowych);
+
+
     }
 }
